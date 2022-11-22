@@ -11,7 +11,7 @@
 * [🔎 Select Datasets](plan/select-datasets.md)
 * [🎟 Apply for Filecoin Plus DataCap](plan/apply-for-filecoin-plus-datacap.md)
 * [🏢 Select Storage Providers](plan/select-storage-providers.md)
-* [📤 Data onboarding pipeline](plan/data-onboarding-pipeline.md)
+* [📤 Reference Architecture](plan/reference-architecture.md)
 * [⚖ Capacity planning](plan/capacity-planning.md)
 
 ## Execute
