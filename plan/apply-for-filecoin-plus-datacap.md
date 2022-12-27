@@ -26,7 +26,7 @@ It is recommended to apply for LDN using a Github account with some history of c
 
 The LDN Application process can take some time for governance review by Filecoin Notaries. It is recommended to furnish as much information as is reasonable, clearly describe the use-case and the data client context, be transparent, and err on the side of over-communicating details. It is recommended to subscribe to updates to the LDN Application Github issue and respond promptly to questions from the community.
 
-
+Each LDN application can support a current maximum datacap amount of 5 PiB. For datasets that exceed 5 PiB, one approach is to submit a multi-part series of LDNs.&#x20;
 
 
 

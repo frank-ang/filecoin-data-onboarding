@@ -1,38 +1,106 @@
-# 📥 Retrieve Data
+# 📥 Data Retrieval
 
-
+Singularity provides a user-friendly way to retrieve data using URI paths, similar to filesystem paths&#x20;
 
 {% hint style="info" %}
-This guide describes retrievals using the Singularity tool. Please note the projects within the Filecoin Retrievals Market will enhance retrievals, and is a rapidly-evolving space. Find out more at [https://retrieval.market/](https://retrieval.market/)&#x20;
+This guide describes retrievals using the Singularity tool only. Filecoin retrievals are an evolving space, with projects working on fast CDN-type retrievals. See [https://retrieval.market/](https://retrieval.market/)&#x20;
 {% endhint %}
 
-TODO
+### Prerequisites&#x20;
 
-See [Indexing and Retrieval in the Singularity docs](https://github.com/tech-greedy/singularity/blob/main/getting-started.md#indexing-and-retrieval).
+Singularity has completed the replication of a dataset.
 
-1. Install [IPFS](https://docs.ipfs.tech/install/) and start the daemon service
-2. Create index.\
-   `singularity index create MyDataset`
-3. Publish the IPFS path with DNSLink\
-   `Add or update the TXT record for _dnslink.mydata.net`\
-   `_dnslink.mydata.net 34 IN TXT "dnslink=/ipfs/bafy..."`
-4.  Browse and Retrieve the dataset (copy pasted from singularity docs)
+SPs have sealed the dataset and deals are active on-chain.
 
-    ```
-    # ls command tells what file or folder is inside the sub path of the dataset
-    singularity-retrieve ls -v singualrity://ipns/mydata.net/sub/path
-    # show command tells the CID of the file or folder and how to assemble them back 
-    singularity-retrieve show singualrity://ipns/mydata.net/sub/path
-    # cp command retrieves the data from a specific storage provider to a local path and reassemble them if needed
-    singularity-retrieve cp -p f01111 singualrity://ipns/mydata.net/sub/path ./local/path
-    ```
+IPFS daemon service is started.
 
-    ###
+### Create Index
 
-    \
+Create the index for a named dataset:
+
+```bash
+singularity index create $DATASET_NAME_OR_ID
+```
+
+If your dataset contains a larger numbers of files that exceed default index soft-limits, you should increase the default parameters.
+
+```
+singularity index create --max-links $INDEX_MAX_LINKS \
+  --max-nodes $INDEX_MAX_NODES $DATASET_NAME
+```
+
+This command writes the index to IPFS, and prints the IPFS path of the index in a DNS TXT record. &#x20;
+
+```
+Add or update a DNS TXT record for _dnslink.mydata.net
+  _dnslink.mydata.net 34 IN TXT "dnslink=/ipfs/bafy..."
+```
+
+#### Publish the index with a user-friendly name (optional)
+
+To make the IPFS path more user-friendly, a DNS TXT record for DNSLink can be published that contains the IPFS path, providing an easy logical name to reference the index.
+
+E.g. If your organization owns the domain "mydata.net", and the dataset is named "mydatasetname" the DNSLink subdomain record can be:
+
+```
+  _dnslink.mydatasetname.mycorp.net 34 IN TXT "dnslink=/ipfs/bafy..."
+```
+
+Consult your DNS provider for specific instructions to update the TXT record.
+
+**Alternate ways to reference IPFS paths (optional)**
+
+If you do not have access to update the DNS provider of your organization, an alternative way is to use environment variables, aliases, or other indirection methods to dereference the IPFS path.
+
+### List data&#x20;
+
+Using DNSLink name:
+
+```
+singularity-retrieve ls -v singularity://ipns/mydata.net/
+singularity-retrieve ls -v singularity://ipns/mydata.net/sub/path
+```
+
+Using the actual IPFS path.
+
+```
+singularity-retrieve ls -v "singularity://ipfs/bafy.../"
+singularity-retrieve ls -v "singularity://ipfs/bafy.../sub/path"
+```
+
+### Retrieve data
+
+Using DNSLink name:
+
+```
+singularity-retrieve cp -p $MINERID \
+  singularity://ipns/mydata.net/sub/path $OUTPUT_PATH
+```
+
+Using the actual IPFS path.
+
+```
+singularity-retrieve cp -p $MINERID \
+  "singularity://ipfs/bafy.../sub/path" <OUTPUT_PATH>
+```
+
+Based on [Indexing and Retrieval in the Singularity docs](https://github.com/tech-greedy/singularity/blob/main/getting-started.md#indexing-and-retrieval).
+
+### Convenience helpers
+
+Optionally, you can simplify user commands by defining aliases or helper scripts configured to the  index path in environment variables or aliases. E.g.
+
+<pre><code><strong>fil-ls /sub/path
+</strong>fil-cp /sub/path &#x3C;OUTPUT_PATH>
+</code></pre>
+
+Example implementations of fil-ls and fil-cp are at [https://github.com/frank-ang/filecoin-data-onboarding-tools/](https://github.com/frank-ang/filecoin-data-onboarding-tools/blob/master/lotus/fil-cp)
 
 
-    \
+
+
+
+\
 
 
 

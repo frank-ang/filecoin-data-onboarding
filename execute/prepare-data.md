@@ -42,7 +42,7 @@ At the completion of data preparation, a set of CAR files become available in th
 
 Further details in the [Singularity quick start guide](https://github.com/tech-greedy/singularity/blob/main/getting-started.md). &#x20;
 
-### Note on padding (TODO)
+### CAR padding and datacap (TODO)
 
 Affects dataset sizing for datacap.
 

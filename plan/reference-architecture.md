@@ -8,17 +8,16 @@ The following is the prescribed data pipeline design to onboard large data sets.
 
 ####
 
-An outline of steps are as follows:
+An outline of data onboarding steps are as follows:
 
 1. Apply for Datacap
-2. Transfer source data for data preparation.
-3. Prepare source data into the **C**ontent-addressable **AR**chive ("CAR") format
-4. Storage Providers receives prepared CAR files from the Data Broker
-5. Data Broker proposes storage deals to SPs.
-
-
-
-
+2. Fetch source dataset for data preparation.
+3. Prepare source dataset into the **C**ontent-addressable **AR**chive ("CAR") format
+4. Transfer CAR files to Storage Providers
+5. Propose storage deals to SPs.
+6. Each SP imports CAR files for storage deals and seals the data
+7. Create an index for each dataset.
+8. Test retrievals&#x20;
 
 #### Data Broker
 
@@ -35,26 +34,6 @@ The Data Broker role can be performed by either of:
 
 
 
-### 2. Data Transfer to Data Preparer.
 
-The original dataset may be optionally pre-processed by the Data Owner, e.g. encryption, to form the Source Data. The Source Data can then be transferred to the Data Preparer using any online protocol or offline transport.
-
-1-time online data transfer to a Data Preparer can reduce data transfer costs for the Data Owner, particularly if public cloud data egress fees apply. Other things to evaluate:
-
-* hybrid cloud connectivity from public cloud to on-premises, if applicable.
-* optimal connectivity from Source Data to Data Preparer, e.g. co-location, if feasible.&#x20;
-* offline data transfer options, where available.
-
-The Data Preparer is responsible for packaging the source data into the Filecoin CAR format, and staging the CAR files for distribution to the other participating SPs who will store replicas. The Data Preparer hosts the CAR files that participating SPs will fetch upon receipt of the online data transfer deal. Alternatively the SP will fetch&#x20;
-
-### 3. Data Preparation
-
-###
-
-### 4. Distribute data to SPs
-
-Determine the usable network bandwidth to a specific miner endpoint. Evaluate data transfer optimization such as aria2, HTTP protocol compression, etc. Calculate the estimate online data transfer time for the full dataset.
-
-### 5. Propose Storage Deals
 
 ###

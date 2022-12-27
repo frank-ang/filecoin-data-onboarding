@@ -2,7 +2,7 @@
 
 ### For Data Owners
 
-Assess the success of your first Filecoin data onboarding Proof-of-Concept (POC). Determine which follow-on datasets can be suitable candidates for follow-on data onboarding.
+Assess the success of your first Filecoin data onboarding Proof-of-Concept (POC). Determine which follow-on datasets can be suitable candidates for follow-on data onboarding projects.
 
 Consider becoming a Filecoin Case Study. This will highlight your&#x20;
 
@@ -13,17 +13,15 @@ Storage deals are currently limited to 540 days. Deals that are less than 540 da
 The current process to renew deals is to simply re-apply for DataCap for new deals, and for Storage providers to re-seal the data.
 
 {% hint style="info" %}
-Storage deal renewals is an evolving space. Some relevant work is in-progress include:
+Storage deal renewals is an evolving space. Some notable work in-progress include:
 
-* Extend maximum storage deal duration&#x20;
-* Filecoin Virtual Machine, which can enable new ways to renew data storage, such as Data DAOs.
+* Extending maximum storage deal duration up to 5 years.&#x20;
+* Filecoin Virtual Machine, enabling smart contracts, which can potentially be used to implement data storage renewal and Data DAOs.
 {% endhint %}
 
-###
+### For Data Brokers and Lead Storage Providers
 
-### For Data Preparers and Lead Storage Providers
-
-Successful data onboarding projects gives the Lead SP greater experience, competence, and efficiency to onboard a greater volume of datasets to Filecoin.&#x20;
+Successful data onboarding projects gives the Lead SP / Data Broker greater experience, competence, and efficiency to onboard a greater volume of datasets to Filecoin.&#x20;
 
 Consider setting up a repeatable data onboarding service, and consider commercial models for such a service.
 

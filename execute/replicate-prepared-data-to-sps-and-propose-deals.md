@@ -14,9 +14,19 @@ Large dataset deals typically uses **off**line storage deals, which separates th
 
 In contrast, "Online" deals transfers data immediately following the deal proposal, as a single user operation, which can be suitable only for smaller datasets over reliable network connections.
 
-The advantages of Offline deals include: greater flexibility to choose suitable transports, e.g. HTTPS, aria2, SCP, Rsync, S3, shipping physical storage media; ability to retry over unreliable transports; and enables batch scheduling, giving SPs better control over their sealing pipeline.
+Advantages of Offline deals include: flexibility of transports, e.g. HTTPS, aria2, SCP, Rsync, S3, shipping physical storage media; ability to retry over unreliable transports; and enables batch scheduling, giving SPs better control over their sealing pipeline.
 
 More info in the Lotus docs about [deals with offline data transfer](https://lotus.filecoin.io/tutorials/lotus/large-files/#deals-with-offline-data-transfer).
+
+
+
+### For lotus client legacy deals (non-boost)&#x20;
+
+For legacy deals, Singularity invokes lotus client. Before proposing storage deals, CAR files should first be imported into the Lotus node. This registers the data for deals into lotus client.&#x20;
+
+```
+lotus client import --car $CAR_FILE
+```
 
 ### Propose storage deals to SPs
 
@@ -31,7 +41,7 @@ singularity repl start --max-deals 2 --cron-schedule '*/2 * * * *' \
     --cron-max-deals 200 --cron-max-pending-deals 2 \
     --start-delay $START_DELAY_DAYS --duration $DURATION_DAYS \
     --verified true \
-    --output-csv $CSV_DIR $DATASET_NAME $MINERID $CLIENT_WALLET_ADDRESS
+    --output-csv $CSV_DIR $DATASET_ID $MINERID $CLIENT_WALLET_ADDRESS
 ```
 
 * sends `--max-deals` per replication request per SP, per cron triggered
@@ -41,7 +51,7 @@ singularity repl start --max-deals 2 --cron-schedule '*/2 * * * *' \
 * sets --duration days for the deal.
 * Indicates a `--verified` deal, using Fil+ datacap, so price in Fil not required.
 * Writes metadata about sent deals to --output-csv
-* DATASET\_NAME: name of the prepared dataset
+* DATASET\_ID: Singularity id of the prepared dataset.
 * MINERID: Comma separated storage provider ID list.
 * CLIENT\_WALLET\_ADDRESS: address containing Fil+ datacap or FIL tokens..
 
@@ -56,13 +66,13 @@ lotus-miner storage-deals import-data $DEAL_CID $CAR_FILENAME
 There is a convenience import scripts in the Singularity repo `auto-import-boost.sh` (boost deals) or `auto-import.sh` (legacy deals).
 
 ```
-TODO: code sample and input file format for script.
+TODO: code sample and input file format for scripts?
 
 ```
 
 ### **Data Sealing**
 
-Each SP's miner then proceeds to seal the imported data. This is a computationally-intensive process and can take time to complete across a large dataset. The Data Preparer can track the progress using
+Each SP's miner then proceeds to seal the imported data. This is a computationally-intensive process and can take time to complete across a large dataset. The Data Preparer can track the status using:
 
 ```
 singularity status $DATASET_ID

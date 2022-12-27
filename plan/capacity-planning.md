@@ -23,11 +23,14 @@ For network data transfer, estimate the bandwidth required and transfer duration
 The Data Broker server should be installed with:
 
 * [Singularity](https://singularity.storage/) - petabyte-scale data onboarding and retrieval client tool&#x20;
-* [Lotus Lite node](https://lotus.filecoin.io/lotus/install/lotus-lite/) - a lite client for interacting with the Filecoin chain.&#x20;
-* [Boost](https://boost.filecoin.io/) - supporting client for newer v1.2 deals
+* [Lotus Lite node](https://lotus.filecoin.io/lotus/install/lotus-lite/) - a lite client for interacting with the Filecoin chain. Used for legacy deals.
+* [Boost](https://boost.filecoin.io/) - the new lotus markets client used for newer v1.2 deals
 * Web Server - hosting of CAR files for online data transfer to SPs. E.g. Nginx.
+* [IPFS](https://docs.ipfs.tech/install/) daemon, stores the Singularity dataset index for retrievals.
 
-It is recommended to build from source for Singularity, Lotus node, and Boost,
+It is recommended to use an Ubuntu Linux instance and build the Singularity, Lotus node, and Boost packages from source.
+
+TODO: provide script to install the above stack?
 
 **Example project configuration and results.**
 

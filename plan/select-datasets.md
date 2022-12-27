@@ -8,7 +8,7 @@ description: Define your data storage requirements and objectives
 
 When selecting the dataset to be stored into the Filecoin network, Data Owners should consider: data classification, use-cases, value of the data, costs and issues with an existing storage solution.
 
-The total sizing of a "large dataset" multiplied to include all replicas, is typically defined as between 500TiB to 5 PiB size, including all replicas.
+The total sizing of a "large dataset" multiplied to include all replicas, is typically defined as larger than 500TiB, including all replicas.
 
 #### Sizing and Regional placement
 
@@ -38,8 +38,8 @@ Consider the "Temperature" of data. Cold data storage and infrequent access of a
 
 The retrieval of hotter datasets that require frequent retrievals and with lower latency is an evolving space, but outside the scope of this guide. Refer to [Filecoin Retrieval market](https://retrieval.market/) for projects working on fast CDN retrievals on Filecoin.&#x20;
 
-### Success objectives
+### Define project objectives&#x20;
 
-Determine the success criteria, e.g. reducing storage costs, improvement from existing storage infrastructure, improving data availability and data durability, improving data decentralization, enabling Web3 use-cases, etc.&#x20;
+Determine the project objectives, e.g. reducing storage costs, improvement from existing storage infrastructure, improving data availability and data durability, improving data decentralization, enabling Web3 use-cases, etc.&#x20;
 
 Plan for retrieval testing.

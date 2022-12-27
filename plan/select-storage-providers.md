@@ -9,7 +9,9 @@ SPs can be selected from multiple sources:
 * Filecoin Plus Registry of miners [https://plus.fil.org/miners](https://plus.fil.org/miners)
 * Ask for suggestions on Filecoin Slack. [https://filecoin.io/slack/](https://filecoin.io/slack/)
 
-Data owners that prefer to delegate data onboarding tasks, should select a Lead SP to handle the data onboarding work, as the single point of coordination with other participating SPs. In the case where a data owner already has a business relationship with an SP, this SP can serve as the Lead SP.
+Data owners that prefer to delegate data onboarding tasks, should appoint a Lead SP as the Data Broker to execute data onboarding tasks, and to serve as the single point of coordination with participating SPs. In the case where a data owner already has a business relationship with an SP, this SP can serve as the Lead SP.
+
+When evaluating participating SPs, consider SP reputation, location, operational reliability, storage retrievability, network bandwidth. Consider whether each SPs will store a full-replica or have replicas sharded across a larger number of SPs.
 
 When planning a data distribution plan across all participating SPs, please align to the guidelines of Fil+:&#x20;
 
