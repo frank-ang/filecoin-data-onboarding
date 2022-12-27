@@ -1,23 +1,37 @@
-# 📤 Reference Architecture
+# 📐 Reference Architecture
 
 ### Data flow design
 
-This guide prescribes the following data pipeline design.&#x20;
+The following is the prescribed data pipeline design to onboard large data sets.&#x20;
 
 <figure><img src="../.gitbook/assets/large-data-onboarding-reference-architecture.drawio.png" alt=""><figcaption><p>Data Broker Reference Architecture</p></figcaption></figure>
 
+####
+
+An outline of steps are as follows:
+
+1. Apply for Datacap
+2. Transfer source data for data preparation.
+3. Prepare source data into the **C**ontent-addressable **AR**chive ("CAR") format
+4. Storage Providers receives prepared CAR files from the Data Broker
+5. Data Broker proposes storage deals to SPs.
+
+
+
+
+
 #### Data Broker
 
-This document proposes the term "Data Broker" as the role responsible for Data Preparation, coordination with participating SPs, and Deal Making to said SPs.&#x20;
+The "Data Broker" role is responsible for data preparation, coordination with participating SPs, and to make storage deals with SPs. The Data Broker can recommend participating SPs that meet the data owner's requirements. The Data Broker functions as a trusted agent of the data owner.&#x20;
 
-The Data Broker functions as a trusted agent of the Data Owner. The Data Broker role can be performed by any of:
+The Data Broker role can be performed by either of:
 
-* the Data Client itself,
-* a lead Storage Provider (this is currently typical), &#x20;
-* an independent Data Broker service provider,&#x20;
-* split roles across multiple Data Preparers, and a Deal Making engine, such as [Filecoin Slingshot](https://slingshot.filecoin.io/).   &#x20;
-
-Once the preceding steps are cleared, i.e.: DataCap tranche allocated, Storage Providers selected, Data Preparer selected, then the following steps are:
+* the _Lead Storage Provider,_\
+  __The onboarding experience is managed by an experienced and skilled Lead SP. The Lead SP becomes a trusted delegate of the Data Owner.
+* the _Data Owner_,\
+  When the data owner organization wants to take control of the onboarding process, and have the required technical skills and resources.
+* an _independent_ _service provider_\
+  __The Data Broker can potentially become a services business for vendors and systems integrators.
 
 
 
