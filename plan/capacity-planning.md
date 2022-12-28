@@ -30,11 +30,11 @@ The Data Broker server should be installed with:
 
 It is recommended to use an Ubuntu Linux instance and build the Singularity, Lotus node, and Boost packages from source.
 
-TODO: provide script to install the above stack?
+An example script to build and install the above stack is at \[**TODO** link to repo]
 
 **Example project configuration and results.**
 
-TODO: insert DSS actual sizing and results as guideline.
+**TODO**: insert DSS actual sizing and results as guideline.
 
 
 

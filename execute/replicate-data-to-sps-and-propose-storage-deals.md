@@ -1,8 +1,8 @@
-# 📤 Replicate Prepared Data to SPs and Propose Deals
+# 📤 Replicate Data to SPs and Propose Storage Deals
 
-Data transfer and deal making to SP proceeds as follows:
+Data transfer and deal making to each SP proceeds as follows:
 
-1. Data Transfer. CAR files are transferred to SPs, typically "Offline" or out-of-band from the storage deal. Either network URL download or physical transport can be used.
+1. Data Transfer. CAR files are transferred to SPs, typically "Offline" or out-of-band from the storage deal. Either network URL download or physical transport can be used.&#x20;
 2. Propose Storage Deals. The Data Broker proposes storage deals for each transferred CAR file. Offline deals is the default mode of the Singularity tool
 3. Data Import. The SP imports received CAR files, matched to corresponding storage deals by `deal CID`. The miner proceeds to seal imported deals.
 
@@ -18,7 +18,7 @@ Advantages of Offline deals include: flexibility of transports, e.g. HTTPS, aria
 
 More info in the Lotus docs about [deals with offline data transfer](https://lotus.filecoin.io/tutorials/lotus/large-files/#deals-with-offline-data-transfer).
 
-
+Each SP is directed to download the set of CARs relevant to them, according to the distribution plan, and coordinated by the Data Broker.
 
 ### For lotus client legacy deals (non-boost)&#x20;
 
@@ -55,15 +55,17 @@ singularity repl start --max-deals 2 --cron-schedule '*/2 * * * *' \
 * MINERID: Comma separated storage provider ID list.
 * CLIENT\_WALLET\_ADDRESS: address containing Fil+ datacap or FIL tokens..
 
+\>> TODO question for DSS: what are the guidelines to determine the rate of repl deals to each SP?&#x20;
+
 ### SPs imports CAR files&#x20;
 
-After each SP receives both the CAR files and storage deals, the SP imports CAR files matched to each Storage Deal by `deal Cid`.
+After each SP receives their CAR files and storage deals, the SP imports CAR files matched to each Storage Deal by `deal Cid`.
 
 ```
 lotus-miner storage-deals import-data $DEAL_CID $CAR_FILENAME
 ```
 
-There is a convenience import scripts in the Singularity repo `auto-import-boost.sh` (boost deals) or `auto-import.sh` (legacy deals).
+There are a convenience import scripts in the Singularity repo `auto-import-boost.sh` (boost deals) or `auto-import.sh` (legacy deals).
 
 ```
 TODO: code sample and input file format for scripts?
@@ -72,9 +74,15 @@ TODO: code sample and input file format for scripts?
 
 ### **Data Sealing**
 
-Each SP's miner then proceeds to seal the imported data. This is a computationally-intensive process and can take time to complete across a large dataset. The Data Preparer can track the status using:
+Each SP's miner then proceeds to seal the imported data. This is a computationally-intensive process performed by the SP. The duration is dependent on the sealing rate of an SP, and the size of the dataset to be sealed.&#x20;
+
+The Data Preparer can track the status by checking deal status:
 
 ```
 singularity status $DATASET_ID
 ```
+
+
+
+
 

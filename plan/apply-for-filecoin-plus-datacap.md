@@ -18,15 +18,19 @@ It is recommended to use a lotus-lite node to create a wallet, and please secure
 
 ### Apply for **Large Dataset Datacap Application**&#x20;
 
-using the Large Data Notary ("LDN") application process. Apply on the [filecoin-plus-large-datasets Github repo issues](https://github.com/filecoin-project/filecoin-plus-large-datasets/issues/), click "New Issue" -> Large Dataset Notary application -> "Get Started".
+Create a Large Dataset Datacap Application as a Github issue at:\
+[https://github.com/filecoin-project/filecoin-plus-large-datasets/issues](https://github.com/filecoin-project/filecoin-plus-large-datasets/issues),  \
+click "New Issue" -> Large Dataset Notary application -> "Get Started".
+
+Alternately, use [https://filplus.storage/apply](https://filplus.storage/apply) &#x20;
 
 {% hint style="info" %}
-It is recommended to apply for LDN using a Github account with some history of commits or repository activity, to better align with Github terms of service.
+Where possible, apply for datacap using a Github account with some history of commits or repository activity, to better align with Github terms of service.
 {% endhint %}
 
-The LDN Application process can take some time for governance review by Filecoin Notaries. It is recommended to furnish as much information as is reasonable, clearly describe the use-case and the data client context, be transparent, and err on the side of over-communicating details. It is recommended to subscribe to updates to the LDN Application Github issue and respond promptly to questions from the community.
+The datacap application process can take several days of governance review. Q\&A about the application can extend the duration, so it is recommended to provide clear and complete information, clearly describe the use-case, be transparent. When in doubt, over-communicate details. Click "subscribe" to receive questions and comments on the Datacap application, so that you can respond promptly to questions from the Filecoin governance community.
 
-Each LDN application can support a current maximum datacap amount of 5 PiB. For datasets that exceed 5 PiB, one approach is to submit a multi-part series of LDNs.&#x20;
+Each datacap application has a maximum datacap limit of 5 PiB. For datasets that exceed 5 PiB, one approach is to submit a multi-part series of LDNs.&#x20;
 
 
 

@@ -17,6 +17,6 @@
 
 * [⚒ Setup Data Broker environment](plan/capacity-planning.md)
 * [📦 Prepare Data](execute/prepare-data.md)
-* [📤 Replicate Prepared Data to SPs and Propose Deals](execute/replicate-prepared-data-to-sps-and-propose-deals.md)
+* [📤 Replicate Data to SPs and Propose Storage Deals](execute/replicate-data-to-sps-and-propose-storage-deals.md)
 * [📥 Data Retrieval](execute/retrieve-data.md)
 * [⏭ Next steps](execute/next-steps.md)

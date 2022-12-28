@@ -61,7 +61,7 @@ singularity-retrieve ls -v singularity://ipns/mydata.net/
 singularity-retrieve ls -v singularity://ipns/mydata.net/sub/path
 ```
 
-Using the actual IPFS path.
+Using the IPFS path.
 
 ```
 singularity-retrieve ls -v "singularity://ipfs/bafy.../"
@@ -77,24 +77,25 @@ singularity-retrieve cp -p $MINERID \
   singularity://ipns/mydata.net/sub/path $OUTPUT_PATH
 ```
 
-Using the actual IPFS path.
+Using the IPFS path.
 
 ```
 singularity-retrieve cp -p $MINERID \
   "singularity://ipfs/bafy.../sub/path" <OUTPUT_PATH>
 ```
 
-Based on [Indexing and Retrieval in the Singularity docs](https://github.com/tech-greedy/singularity/blob/main/getting-started.md#indexing-and-retrieval).
+Ref: [Indexing and Retrieval in the Singularity getting started doc](https://github.com/tech-greedy/singularity/blob/main/getting-started.md#indexing-and-retrieval).
 
 ### Convenience helpers
 
 Optionally, you can simplify user commands by defining aliases or helper scripts configured to the  index path in environment variables or aliases. E.g.
 
-<pre><code><strong>fil-ls /sub/path
+<pre><code><strong>export INDEX_ROOT_CID="/ipfs/bafy..."
+</strong><strong>fil-ls /sub/path
 </strong>fil-cp /sub/path &#x3C;OUTPUT_PATH>
 </code></pre>
 
-Example implementations of fil-ls and fil-cp are at [https://github.com/frank-ang/filecoin-data-onboarding-tools/](https://github.com/frank-ang/filecoin-data-onboarding-tools/blob/master/lotus/fil-cp)
+Here are example convenience commands for [fil-ls ](https://github.com/frank-ang/filecoin-data-onboarding-tools/blob/master/lotus/fil-ls)and [fil-cp](https://github.com/frank-ang/filecoin-data-onboarding-tools/blob/master/lotus/fil-cp) .
 
 
 

@@ -2,9 +2,11 @@
 
 ### For Data Owners
 
-Assess the success of your first Filecoin data onboarding Proof-of-Concept (POC). Determine which follow-on datasets can be suitable candidates for follow-on data onboarding projects.
+Congratulations for completing a large data onboarding to Filecoin!&#x20;
 
-Consider becoming a Filecoin Case Study. This will highlight your&#x20;
+Assess the success of your Filecoin data onboarding Proof-of-Concept (POC). Determine which additional datasets are suitable candidates for follow-on data onboarding projects.
+
+Consider becoming a Filecoin Case Study. &#x20;
 
 #### Deal Renewal
 
