@@ -1,6 +1,6 @@
-# 📥 Data Retrieval
+# 📥 Retrieve Data
 
-Singularity provides a user-friendly way to retrieve data using URI paths, similar to filesystem paths&#x20;
+Singularity provides a user-friendly way to browse and retrieve the dataset using URI paths, similar to filesystem paths.
 
 {% hint style="info" %}
 This guide describes retrievals using the Singularity tool only. Filecoin retrievals are an evolving space, with projects working on fast CDN-type retrievals. See [https://retrieval.market/](https://retrieval.market/)&#x20;
@@ -14,9 +14,9 @@ SPs have sealed the dataset and deals are active on-chain.
 
 IPFS daemon service is started.
 
-### Create Index
+### Create Dataset Index
 
-Create the index for a named dataset:
+Create the index for a dataset:
 
 ```bash
 singularity index create $DATASET_NAME_OR_ID
@@ -29,14 +29,14 @@ singularity index create --max-links $INDEX_MAX_LINKS \
   --max-nodes $INDEX_MAX_NODES $DATASET_NAME
 ```
 
-This command writes the index to IPFS, and prints the IPFS path of the index in a DNS TXT record. &#x20;
+The dataset's index is written to an IPFS CID. Retrieval operations using the Singularity client will lookup this IPFS index.&#x20;
 
 ```
 Add or update a DNS TXT record for _dnslink.mydata.net
   _dnslink.mydata.net 34 IN TXT "dnslink=/ipfs/bafy..."
 ```
 
-#### Publish the index with a user-friendly name (optional)
+#### Lookup the index using a user-friendly DNSLink name
 
 To make the IPFS path more user-friendly, a DNS TXT record for DNSLink can be published that contains the IPFS path, providing an easy logical name to reference the index.
 
@@ -48,7 +48,7 @@ E.g. If your organization owns the domain "mydata.net", and the dataset is named
 
 Consult your DNS provider for specific instructions to update the TXT record.
 
-**Alternate ways to reference IPFS paths (optional)**
+**Alternate ways to reference the index IPFS path**&#x20;
 
 If you do not have access to update the DNS provider of your organization, an alternative way is to use environment variables, aliases, or other indirection methods to dereference the IPFS path.
 

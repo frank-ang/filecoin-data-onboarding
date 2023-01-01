@@ -5,6 +5,7 @@ Select SPs that meet your requirements, endpoint presence in regions that match 
 SPs can be selected from multiple sources:
 
 * Starboard Ventures SPRD (Storage Provider Reputation Dashboard) [https://sprd.starboard.ventures/](https://sprd.starboard.ventures/)
+* Filrep [https://filrep.io/](https://filrep.io/)
 * Filgram [https://filmine.io/filgram?type=active](https://filmine.io/filgram?type=active)
 * Filecoin Plus Registry of miners [https://plus.fil.org/miners](https://plus.fil.org/miners)
 * Make connections on Filecoin Slack. [https://filecoin.io/slack/](https://filecoin.io/slack/)

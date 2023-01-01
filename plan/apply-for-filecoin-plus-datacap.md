@@ -32,6 +32,10 @@ The datacap application process can take several days of governance review. Q\&A
 
 Each datacap application has a maximum datacap limit of 5 PiB. For datasets that exceed 5 PiB, one approach is to submit a multi-part series of LDNs.&#x20;
 
+{% hint style="info" %}
+Plan for an additional amount of datacap as buffer, as the storage deals are sized based on the total padded Content Addressable aRchive (CAR) files. The size of each CAR file must be a power of two, so when data is packed into CAR files, padding is often added. There is typically not 100% efficiency in data packing.
+{% endhint %}
+
 
 
 

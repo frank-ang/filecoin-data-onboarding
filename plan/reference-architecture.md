@@ -2,11 +2,11 @@
 
 ### Data flow design
 
-The following is the prescribed data pipeline design to onboard large data sets.&#x20;
+The following is the reference data pipeline design to onboard large data sets.&#x20;
 
-<figure><img src="../.gitbook/assets/large-data-onboarding-reference-architecture.drawio.png" alt=""><figcaption><p>Data Broker Reference Architecture</p></figcaption></figure>
+ 
 
-####
+<figure><img src="../.gitbook/assets/large-data-onboarding-reference-architecture.drawio.png" alt=""><figcaption><p>Large data onboarding pipeline with storage gateway</p></figcaption></figure>
 
 An outline of data onboarding steps are as follows:
 
@@ -19,20 +19,18 @@ An outline of data onboarding steps are as follows:
 7. Create an index for each dataset.
 8. Test retrievals&#x20;
 
-#### Data Broker
+#### Storage Gateway
 
-The "Data Broker" role is responsible for data preparation, coordination with participating SPs, and to make storage deals with SPs. The Data Broker can recommend participating SPs that meet the data owner's requirements. The Data Broker functions as a trusted agent of the data owner.&#x20;
+The "storage gateway" is a client-facing role responsible for data preparation, coordination with and deal-making with participating SPs. The organization running the storage gateway may recommend participating SPs based on individual client requirements. &#x20;
 
-The Data Broker role can be performed by either of:
+The _Storage Gateway_ role can be performed by any of:
 
 * the _Lead Storage Provider,_\
-  __The onboarding experience is managed by an experienced and skilled Lead SP. The Lead SP becomes a trusted delegate of the Data Owner.
+  __The client onboarding experience is managed by a _Lead SP._ The lead SP serves as an advisor to the client, and performs data onboarding as a service for the Data Owner.
 * the _Data Owner_,\
   When the data owner organization wants to take control of the onboarding process, and have the required technical skills and resources.
 * an _independent_ _service provider_\
-  __The Data Broker can potentially become a services business for vendors and systems integrators.
-
-
+  __There may potentially be scope for an independent storage gateway market to develop, such as ISV, SaaS, and professional services offerings.&#x20;
 
 
 

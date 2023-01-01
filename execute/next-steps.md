@@ -21,9 +21,9 @@ Storage deal renewals is an evolving space. Some notable work in-progress includ
 * Filecoin Virtual Machine, enabling smart contracts, which can potentially be used to implement data storage renewal and Data DAOs.
 {% endhint %}
 
-### For Data Brokers and Lead Storage Providers
+### For Storage Gateway operators and Lead Storage Providers
 
-Successful data onboarding projects gives the Lead SP / Data Broker greater experience, competence, and efficiency to onboard a greater volume of datasets to Filecoin.&#x20;
+Successful data onboarding projects gives the Lead SP / Storage Gateway operator experience, competence, credibility, and reputation to onboard additional client datasets to Filecoin.&#x20;
 
 Consider setting up a repeatable data onboarding service, and consider commercial models for such a service.
 

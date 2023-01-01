@@ -10,11 +10,17 @@ When selecting the dataset to be stored into the Filecoin network, Data Owners s
 
 The total sizing of a "large dataset" multiplied to include all replicas, is typically defined as larger than 500TiB, including all replicas.
 
-#### Sizing and Regional placement
+### Dataset Sizing&#x20;
 
-Determine how many replicas are needed, and. It is recommended to plan for multiple replicas, to increase data availability and durability. Consider distributing replicas across geographic regions for closer access from distributed users. Consider any data residency regulations that may limit replicas to within a country.
+Determine the size of the source dataset.&#x20;
 
-#### Data Retention
+Determine how many replicas are needed. Multiple replicas across multiple SPs will increase data availability, durability, and fault-tolerance. To calculate the total size, multiply the source dataset by the number of replicas.&#x20;
+
+### Replica placement
+
+Where possible, it is recommended to distribute replicas to multiple SPs across geographic regions. Consider any data residency regulations that may limit replicas to within a country.
+
+### Data Retention
 
 Determine the duration the dataset needs to be retained for. The current maximum duration of Filecoin storage deals is 540 days. After this period, deals can be renewed by making new storage deals and re-sealing.
 
@@ -28,15 +34,19 @@ Private datasets will require the Data Owner to implement encryption for data pr
 
 Encryption of the dataset by the Data Owner prior to storage is one way of enforcing data confidentiality over the Filecoin storage network. The Data Owner selects an encryption method, encrypts datasets prior to packaging and storage, and decrypts the datasets after retrieval. Data Owners are responsible for secret management and key management.
 
-An experienced Data Preparer can provide advice to the Data Owner on encryption methods and secrets management.
+An experienced Data Preparer provide advice to the Data Owner on encryption methods and secrets management.
 
 TODO: Insert DSS actual scripts.
 
 ### Retrieval frequency
 
-Consider the "Temperature" of data. Cold data storage and infrequent access of archived data is currently a suitable use-case for the Filecoin storage network. Consider what portion of the dataset will be requested for each retrieval, i.e. partial or full. Consider whether the data should be retrieved online, offline data transfer arrangement can be negotiated with the Lead SP.&#x20;
+Consider the "Temperature" of data. Cold data storage and infrequent access of archived data are suitable use-cases for storage on the Filecoin network. Currently, retrieval service levels should be agreed upon with individual SPs.
 
-The retrieval of hotter datasets that require frequent retrievals and with lower latency is an evolving space, but outside the scope of this guide. Refer to [Filecoin Retrieval market](https://retrieval.market/) for projects working on fast CDN retrievals on Filecoin.&#x20;
+Consider what portion of the dataset will be requested for each retrieval, i.e. partial or full. Consider whether the data should be retrieved online, offline data transfer arrangement can be negotiated with the Lead SP.
+
+{% hint style="info" %}
+Fast and lower-latency retrieval of hotter datasets is work-in-progress, and beyond the scope of this guide. Refer to [Filecoin Retrieval market](https://retrieval.market/) for more info.&#x20;
+{% endhint %}
 
 ### Define project objectives&#x20;
 

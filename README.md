@@ -29,4 +29,4 @@ This guide is structured using a checklist approach.&#x20;
 
 #### Looking for other tools?
 
-For smaller datasets (<100TiB), you may consider alternatives such as: [Chainsafe.storage](https://storage.chainsafe.io/), [Estuary.tech](https://estuary.tech/),  [web3.storage](https://web3.storage), or [NFT.storage](https://nft.storage).
+If your organization's dataset is smaller (<100TiB), you may also consider alternatives such as: [Chainsafe.storage](https://storage.chainsafe.io/), [Estuary.tech](https://estuary.tech/),  [web3.storage](https://web3.storage), or [NFT.storage](https://nft.storage).

@@ -2,10 +2,6 @@
 
 * [🌐 Overview](README.md)
 
-## Checklist
-
-* [📋 Checklist](checklist/checklist.md)
-
 ## Plan
 
 * [📐 Reference Architecture](plan/reference-architecture.md)
@@ -15,8 +11,8 @@
 
 ## Execute
 
-* [⚒ Setup Data Broker environment](plan/capacity-planning.md)
+* [⚒ Setup Storage Gateway environment](plan/capacity-planning.md)
 * [📦 Prepare Data](execute/prepare-data.md)
 * [📤 Replicate Data to SPs and Propose Storage Deals](execute/replicate-data-to-sps-and-propose-storage-deals.md)
-* [📥 Data Retrieval](execute/retrieve-data.md)
+* [📥 Retrieve Data](execute/retrieve-data.md)
 * [⏭ Next steps](execute/next-steps.md)

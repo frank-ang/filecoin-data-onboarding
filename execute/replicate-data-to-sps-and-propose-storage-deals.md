@@ -3,22 +3,18 @@
 Data transfer and deal making to each SP proceeds as follows:
 
 1. Data Transfer. CAR files are transferred to SPs, typically "Offline" or out-of-band from the storage deal. Either network URL download or physical transport can be used.&#x20;
-2. Propose Storage Deals. The Data Broker proposes storage deals for each transferred CAR file. Offline deals is the default mode of the Singularity tool
+2. Propose Storage Deals. The Storage Gateway proposes storage deals for each transferred CAR file. Offline deals is the default mode of the Singularity tool
 3. Data Import. The SP imports received CAR files, matched to corresponding storage deals by `deal CID`. The miner proceeds to seal imported deals.
 
-### Data Broker transfers data to SPs
+### Data movement to SPs
 
-Prepared CAR files can be distributed to SPs Online or Offline.
+Prepared CAR files can be distributed online or offline. Unless sufficient usable bandwidth exists for it to be feasible for an SP to download its set of CAR files online, otherwise PiB-scale data transfers often take place offline via physical storage media shipping.&#x20;
 
-Large dataset deals typically uses **off**line storage deals, which separates the data transfer step from the deal-making and import steps. Offline data transfer can be more accurately described as "Out-of-band" data transfer.&#x20;
+"Offline" data transfer can be more accurately described as "Out-of-band" data transfer. Offline deals separate the data transfer steps from the deal making steps, improving recoverability, and is more aligned to bulk large dataset onboarding. Other advantages of offline deals include: flexibility of transport method, e.g. HTTPS, aria2, SCP, Rsync, S3, physical storage media shipping; Batch operations also allow SPs greater control over scheduling their sealing pipeline. The storage gateway coordinates with each SP to receive the set of CARs relevant to them according to the distribution plan.
 
-In contrast, "Online" deals transfers data immediately following the deal proposal, as a single user operation, which can be suitable only for smaller datasets over reliable network connections.
-
-Advantages of Offline deals include: flexibility of transports, e.g. HTTPS, aria2, SCP, Rsync, S3, shipping physical storage media; ability to retry over unreliable transports; and enables batch scheduling, giving SPs better control over their sealing pipeline.
+In contrast, "online" deals transfers data immediately following the deal proposal as a single user operation. This makes online deals easier to use for smaller datasets over reliable network connections.
 
 More info in the Lotus docs about [deals with offline data transfer](https://lotus.filecoin.io/tutorials/lotus/large-files/#deals-with-offline-data-transfer).
-
-Each SP is directed to download the set of CARs relevant to them, according to the distribution plan, and coordinated by the Data Broker.
 
 ### For lotus client legacy deals (non-boost)&#x20;
 
@@ -55,7 +51,7 @@ singularity repl start --max-deals 2 --cron-schedule '*/2 * * * *' \
 * MINERID: Comma separated storage provider ID list.
 * CLIENT\_WALLET\_ADDRESS: address containing Fil+ datacap or FIL tokens..
 
-\>> TODO question for DSS: what are the guidelines to determine the rate of repl deals to each SP?&#x20;
+\>> **TODO** question: what are the guidelines that determine the optimal rate of repl deals to each SP?&#x20;
 
 ### SPs imports CAR files&#x20;
 
