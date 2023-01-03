@@ -2,26 +2,26 @@
 
 ### Data flow design
 
-The following is the reference data pipeline design to onboard large data sets.&#x20;
+The following is the reference data pipeline architecture to onboard large data sets.&#x20;
 
  
 
 <figure><img src="../.gitbook/assets/large-data-onboarding-reference-architecture.drawio.png" alt=""><figcaption><p>Large data onboarding pipeline with storage gateway</p></figcaption></figure>
 
-An outline of data onboarding steps are as follows:
+The outline of data onboarding steps (numbered circles) as follows:
 
-1. Apply for Datacap
-2. Fetch source dataset for data preparation.
-3. Prepare source dataset into the **C**ontent-addressable **AR**chive ("CAR") format
-4. Transfer CAR files to Storage Providers
-5. Propose storage deals to SPs.
-6. Each SP imports CAR files for storage deals and seals the data
+1. Data Owner applies for Datacap, to be allocated to the client wallet.
+2. Gateway fetches source dataset.
+3. Gateway prepares source dataset into **C**ontent-addressable **AR**chive ("CAR") formatted files.
+4. SPs downloads CAR files
+5. Gateway proposes storage deals to SPs.
+6. SPs imports the CAR files corresponding to Storage Deals. Seals the data into sectors.
 7. Create an index for each dataset.
-8. Test retrievals&#x20;
+8. Browse and Retrieve files from the dataset.&#x20;
 
 #### Storage Gateway
 
-The "storage gateway" is a client-facing role responsible for data preparation, coordination with and deal-making with participating SPs. The organization running the storage gateway may recommend participating SPs based on individual client requirements. &#x20;
+The "_Storage Gateway_" is a client-facing role responsible for data preparation, coordination with and deal-making with participating SPs. The organization running the storage gateway may recommend participating SPs based on individual client requirements. &#x20;
 
 The _Storage Gateway_ role can be performed by any of:
 

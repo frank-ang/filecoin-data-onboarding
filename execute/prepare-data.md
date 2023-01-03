@@ -25,9 +25,7 @@ Budget for data transfer costs, e.g. online bandwidth, public cloud network egre
 
 ### Prepare Data
 
-The storage gateway packages the Source Data into the [CAR format](https://ipld.io/specs/transport/car/), **C**ontent **A**ddressable a**R**chive.&#x20;
-
-Prepare a source dataset into CAR files:
+The storage gateway packages the source dataset into [CAR format](https://ipld.io/specs/transport/car/) files, **C**ontent **A**ddressable a**R**chives. To prepare a source dataset into CAR files:
 
 ```
 singularity prep create MyDataset ~/dataset/folder ~/outDir 

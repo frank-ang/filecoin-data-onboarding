@@ -16,7 +16,7 @@ In contrast, "online" deals transfers data immediately following the deal propos
 
 More info in the Lotus docs about [deals with offline data transfer](https://lotus.filecoin.io/tutorials/lotus/large-files/#deals-with-offline-data-transfer).
 
-### For lotus client legacy deals (non-boost)&#x20;
+### Import CAR files into lotus node (for legacy deals)&#x20;
 
 For legacy deals, Singularity invokes lotus client. Before proposing storage deals, CAR files should first be imported into the Lotus node. This registers the data for deals into lotus client.&#x20;
 
@@ -64,11 +64,11 @@ lotus-miner storage-deals import-data $DEAL_CID $CAR_FILENAME
 There are a convenience import scripts in the Singularity repo `auto-import-boost.sh` (boost deals) or `auto-import.sh` (legacy deals).
 
 ```
-TODO: code sample and input file format for scripts?
+TODO: code sample and input file format for import scripts?
 
 ```
 
-### **Data Sealing**
+### **Sealing**
 
 Each SP's miner then proceeds to seal the imported data. This is a computationally-intensive process performed by the SP. The duration is dependent on the sealing rate of an SP, and the size of the dataset to be sealed.&#x20;
 

@@ -6,27 +6,24 @@ description: Home
 
 ## Filecoin Large Data Onboarding Guide
 
-This operational guide walkthroughs the process to onboard large PiB+ size datasets into the Filecoin network. This guide is suitable for data clients and data owners.&#x20;
+This operational guide walkthroughs a checklist of steps to onboard large sized datasets ( >1 PiB in size), into the Filecoin network. This guide is suitable for data clients, data owners, data preparers, and lead SPs.
 
-This guide covers the end-to-end data onboarding process, from planning, data preparation, deal making, and retrieval testing.
+The end-to-end data onboarding process is covered, from planning, data preparation, deal making, and retrieval testing. This guide is intended to be used as a top-level guide that summarizes and contains references to documentation of related projects.
 
-We walkthrough usage of the client-side tooling, primarily the [Singularity tool](https://github.com/tech-greedy/singularity), [Lotus client](https://lotus.filecoin.io/), and [Boost.](https://boost.filecoin.io/) (WIP)&#x20;
-
-This guide is structured using a checklist approach.&#x20;
+This guide provides a walkthrough usage of the primary client-side tooling, namely [Singularity tool](https://github.com/tech-greedy/singularity), [Lotus client](https://lotus.filecoin.io/), and [Boost.](https://boost.filecoin.io/)
 
 ### Data Onboarding Checklist
 
 1. Understand the large data onboarding reference architecture.
-2. Select and size datasets for onboarding
+2. Select datasets for onboarding, estimate sizing.
 3. Apply for Fil+ DataCap
 4. Select Storage Providers
-5. Setup data broker environment
+5. Setup Storage Gateway environment
 6. Prepare Data
-7. Replicate Data and Propose Deals&#x20;
-8. Seal Data
-9. Test retrievals
-10. Next steps
+7. Replicate Data to SPs, Propose Storage Deals&#x20;
+8. Retrieve Data
+9. Next steps
 
-#### Looking for other tools?
+#### Looking for tools for smaller datasets?
 
 If your organization's dataset is smaller (<100TiB), you may also consider alternatives such as: [Chainsafe.storage](https://storage.chainsafe.io/), [Estuary.tech](https://estuary.tech/),  [web3.storage](https://web3.storage), or [NFT.storage](https://nft.storage).
