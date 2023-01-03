@@ -1,10 +1,20 @@
-# 📤 Replicate Data to SPs and Propose Storage Deals
+# 📤 Replicate data to SPs and propose storage deals
 
 Data transfer and deal making to each SP proceeds as follows:
 
 1. Data Transfer. CAR files are transferred to SPs, typically "Offline" or out-of-band from the storage deal. Either network URL download or physical transport can be used.&#x20;
 2. Propose Storage Deals. The Storage Gateway proposes storage deals for each transferred CAR file. Offline deals is the default mode of the Singularity tool
 3. Data Import. The SP imports received CAR files, matched to corresponding storage deals by `deal CID`. The miner proceeds to seal imported deals.
+
+
+
+### Import CAR files into lotus node&#x20;
+
+For legacy deals, Singularity invokes lotus client. Before proposing storage deals, CAR files should first be imported into the Lotus node. This registers the data for deals into lotus client.&#x20;
+
+```
+lotus client import --car $CAR_FILE
+```
 
 ### Data movement to SPs
 
@@ -16,13 +26,7 @@ In contrast, "online" deals transfers data immediately following the deal propos
 
 More info in the Lotus docs about [deals with offline data transfer](https://lotus.filecoin.io/tutorials/lotus/large-files/#deals-with-offline-data-transfer).
 
-### Import CAR files into lotus node (for legacy deals)&#x20;
-
-For legacy deals, Singularity invokes lotus client. Before proposing storage deals, CAR files should first be imported into the Lotus node. This registers the data for deals into lotus client.&#x20;
-
-```
-lotus client import --car $CAR_FILE
-```
+**Question**> Compare appraoches: SP downloads before storage deal, vs during the storage deal?&#x20;
 
 ### Propose storage deals to SPs
 
@@ -51,7 +55,7 @@ singularity repl start --max-deals 2 --cron-schedule '*/2 * * * *' \
 * MINERID: Comma separated storage provider ID list.
 * CLIENT\_WALLET\_ADDRESS: address containing Fil+ datacap or FIL tokens..
 
-\>> **TODO** question: what are the guidelines that determine the optimal rate of repl deals to each SP?&#x20;
+\>> **Question**: what are the guidelines that determine the optimal rate of repl deals to each SP?&#x20;
 
 ### SPs imports CAR files&#x20;
 

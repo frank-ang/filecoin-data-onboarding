@@ -19,17 +19,22 @@ Gateway storage should be sized accordingly for the source dataset, and for host
 
 The storage gateway server should be installed with:
 
-* [Singularity](https://singularity.storage/) - petabyte-scale data onboarding and retrieval client tool&#x20;
-* [Lotus Lite node](https://lotus.filecoin.io/lotus/install/lotus-lite/) - a lite client for interacting with the Filecoin chain. Used for legacy deals.
-* [Boost](https://boost.filecoin.io/) - a new lotus markets client. Used for newer v1.2 deals
-* Web Server - hosting of CAR files for online data transfer to SPs. E.g. Nginx.
-* [IPFS](https://docs.ipfs.tech/install/) daemon, stores the Singularity dataset index for retrievals.
+* [Singularity](https://singularity.storage/) - petabyte-scale data onboarding and retrieval client tool.&#x20;
+  * Install Singularity: [https://boost.filecoin.io/getting-started](https://boost.filecoin.io/getting-started)
+* [Lotus Lite node](https://lotus.filecoin.io/lotus/install/lotus-lite/) - lite client for interacting with the Filecoin chain. Used for legacy deals.
+  * Install Lotus and configure a lotus-lite node: [https://lotus.filecoin.io/lotus/install/lotus-lite/](https://lotus.filecoin.io/lotus/install/lotus-lite/)
+* [Boost](https://boost.filecoin.io/) - new lotus markets client for v1.2 deals with upgraded SPs.
+  * Install Boost client: [https://boost.filecoin.io/getting-started](https://boost.filecoin.io/getting-started)
+* Web Server - hosting of CAR files for online data transfer to SPs.&#x20;
+  * E.g. Nginx.
+* [IPFS](https://docs.ipfs.tech/install/) daemon, stores the Singularity dataset index to support retrievals.
+  * [https://docs.ipfs.tech/install/command-line/](https://docs.ipfs.tech/install/command-line/)
 
-An Ubuntu Linux instance is recommended. Singularity, Lotus node, and Boost packages can be built and installed from source.
+An Ubuntu Linux instance is recommended. Singularity, Lotus node, and Boost packages should be be built and installed from source. Web server and IPFS daemon can be installed from binaries.
 
-An example script to build and install the above stack is at \[**TODO** link to repo]
+\[**TODO** link to Ubuntu build script]
 
-### **Example actual gateway configuration and project results**
+### **Example actual gateway sizing configuration**
 
 **TODO**: insert DSS actual sizing and results as guideline.
 

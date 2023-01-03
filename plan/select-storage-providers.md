@@ -13,9 +13,11 @@ SPs can be selected from multiple sources:
 
 Data owners that prefer to delegate data onboarding tasks, should appoint a Lead SP as the Data Broker to execute data onboarding tasks, and to serve as the single point of coordination with participating SPs. In the case where a data owner already has a business relationship with an SP, this SP can serve as the Lead SP.
 
-When evaluating participating SPs, consider SP reputation, location, operational reliability, storage retrievability, network bandwidth. Consider whether each SPs will store a full-replica or have replicas sharded across a larger number of SPs.
+When evaluating participating SPs, consider SP reputation, location, reliability, retrievability, bandwidth.&#x20;
 
-#### Data Distribution Plan
+#### Data distribution plan
+
+Decide whether each participating SP will store a full replica, or some other data distribution plan, for example, sharding replicas across a larger number of SPs.
 
 When planning how data should be distributed across participating SPs, please align to the guidelines of Fil+:&#x20;
 

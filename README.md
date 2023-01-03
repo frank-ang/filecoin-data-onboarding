@@ -22,7 +22,7 @@ This guide provides a walkthrough usage of the primary client-side tooling, name
 6. Prepare Data
 7. Replicate Data to SPs, Propose Storage Deals&#x20;
 8. Retrieve Data
-9. Next steps
+9. Plan next steps
 
 #### Looking for tools for smaller datasets?
 

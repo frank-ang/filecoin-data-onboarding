@@ -10,7 +10,7 @@ When selecting the dataset to be stored into the Filecoin network, Data Owners s
 
 The total sizing of a "large dataset" multiplied to include all replicas, can exceed 1 PiB.&#x20;
 
-### Dataset Sizing&#x20;
+### Sizing&#x20;
 
 Determine the size of the source dataset.&#x20;
 
@@ -20,7 +20,7 @@ Determine how many replicas are needed. Multiple replicas across multiple SPs wi
 
 Where possible, it is recommended to distribute replicas to multiple SPs across geographic regions. Consider any data residency regulations that may limit replicas to within a country.
 
-### Data Retention
+### Retention
 
 Determine the duration the dataset needs to be retained for. The current maximum duration of Filecoin storage deals is 540 days. After this period, deals can be renewed by making new storage deals and re-sealing.
 
@@ -34,13 +34,13 @@ Private datasets will require the Data Owner to implement encryption for data pr
 
 Encryption of the dataset by the Data Owner prior to storage is one way of enforcing data confidentiality over the Filecoin storage network. The Data Owner selects an encryption method, encrypts datasets prior to packaging and storage, and decrypts the datasets after retrieval. Data Owners are responsible for secret management and key management.
 
-TODO: Ref to DSS actual scripts for illustration?
+Question>> Ref to DSS actual scripts for illustration or no?
 
 ### Retrieval frequency
 
-Consider the "Temperature" of data. At the current state of the Filecoin network, cold data storage and infrequently-accessed archive data are more suitable storage use-cases, than warmer datasets.&#x20;
+Consider the "temperature" of data. At the current state of the Filecoin network, cold data storage and infrequently-accessed archive data are more suitable storage use-cases, than warm or hot datasets.&#x20;
 
-Consider what portion of the dataset will be requested for each retrieval, i.e. partial or full. Consider whether the data should be retrieved online, offline data transfer arrangement can be negotiated with the Lead SP.
+Consider what portion of the dataset will be requested for each retrieval, e.g. individual files,  partial retrieval, or full retrieval. Consider whether a special offline data transfer arrangement should be negotiated with SPs.
 
 {% hint style="info" %}
 Fast and low-latency retrieval over the Filecoin network is currently a work-in-progress, and beyond the scope of this guide. Refer to [Filecoin Retrieval market](https://retrieval.market/) for more info.&#x20;
@@ -48,7 +48,7 @@ Fast and low-latency retrieval over the Filecoin network is currently a work-in-
 
 While the current state of the Filecoin client implementations do support retrievals, however the system of SP retrieval incentives are still evolving so you should check with your selected SPs about retrievability service levels, and to ensure they can support your expected data retrieval pattern.
 
-### Define project objectives&#x20;
+### Define objectives&#x20;
 
-Project objectives can include, e.g. reducing storage costs, improvement from existing storage infrastructure, improving data availability and data durability, improving data decentralization, enabling Web3 use-cases, etc.&#x20;
+Objectives of your data onboarding project on Filecoin can include, e.g. reducing storage costs, improvement on existing storage infrastructure, improving data availability and data durability, increasing storage decentralization, enabling Web3 use-cases, etc.&#x20;
 

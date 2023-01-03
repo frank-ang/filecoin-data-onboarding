@@ -12,7 +12,7 @@
 ## Execute
 
 * [⚒ Setup Storage Gateway environment](plan/capacity-planning.md)
-* [📦 Prepare Data](execute/prepare-data.md)
-* [📤 Replicate Data to SPs and Propose Storage Deals](execute/replicate-data-to-sps-and-propose-storage-deals.md)
-* [📥 Retrieve Data](execute/retrieve-data.md)
-* [⏭ Next steps](execute/next-steps.md)
+* [📦 Prepare data](execute/prepare-data.md)
+* [📤 Replicate data to SPs and propose storage deals](execute/replicate-data-to-sps-and-propose-storage-deals.md)
+* [📥 Retrieve data](execute/retrieve-data.md)
+* [⏭ Plan next steps](execute/next-steps.md)

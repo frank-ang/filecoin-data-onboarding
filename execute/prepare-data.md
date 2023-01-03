@@ -1,4 +1,4 @@
-# 📦 Prepare Data
+# 📦 Prepare data
 
 ### Preprocess dataset (if required)
 
@@ -23,7 +23,7 @@ When evaluating data transfer methods for large datasets, consider what is the o
 
 Budget for data transfer costs, e.g. online bandwidth, public cloud network egress fees, offline shipping.
 
-### Prepare Data
+### Prepare data
 
 The storage gateway packages the source dataset into [CAR format](https://ipld.io/specs/transport/car/) files, **C**ontent **A**ddressable a**R**chives. To prepare a source dataset into CAR files:
 

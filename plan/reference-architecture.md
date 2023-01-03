@@ -23,14 +23,14 @@ The outline of data onboarding steps (numbered circles) as follows:
 
 The "_Storage Gateway_" is a client-facing role responsible for data preparation, coordination with and deal-making with participating SPs. The organization running the storage gateway may recommend participating SPs based on individual client requirements. &#x20;
 
-The _Storage Gateway_ role can be performed by any of:
+The _Storage Gateway_ function can be performed by any of:
 
-* the _Lead Storage Provider,_\
-  __The client onboarding experience is managed by a _Lead SP._ The lead SP serves as an advisor to the client, and performs data onboarding as a service for the Data Owner.
 * the _Data Owner_,\
   When the data owner organization wants to take control of the onboarding process, and have the required technical skills and resources.
+* the _Lead Storage Provider,_\
+  __The client onboarding experience is managed by a _Lead SP._ The lead SP serves as an advisor to the client, and performs data onboarding as a service for the Data Owner.
 * an _independent_ _service provider_\
-  __There may potentially be scope for an independent storage gateway market to develop, such as ISV, SaaS, and professional services offerings.&#x20;
+  __There may potentially be scope for a storage gateway market to develop, possibly provided by ISV, SaaS, and other service providers.&#x20;
 
 
 

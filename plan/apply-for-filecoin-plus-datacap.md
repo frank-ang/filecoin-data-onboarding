@@ -14,7 +14,13 @@ Datacap is part of the Fil+ (Filecoin Plus) programme. More info about Fil+ Plus
 
 The wallet address will be where approved Fil+ datacap will be allocated to.&#x20;
 
-It is recommended to use a lotus-lite node to create a wallet, and please securely backup the wallet keys. To create a Filecoin wallet on a lotus node, see [wallet instructions on lotus docs](https://lotus.filecoin.io/tutorials/lotus/store-and-retrieve/set-up/#get-a-fil-address).
+To create a Filecoin wallet on a lotus node, see [wallet instructions on lotus docs](https://lotus.filecoin.io/tutorials/lotus/store-and-retrieve/set-up/#get-a-fil-address).
+
+To create a Filecoin wallet on Boost client, see [boost init command on boost docs](https://boost.filecoin.io/getting-started/boost-client).
+
+Please securely backup the wallet keys, using `lotus wallet export` or `boost wallet export` commands &#x20;
+
+Question> How to use same datacap wallet across lotus and boost?
 
 ### Apply for **Large Dataset Datacap Application**&#x20;
 
