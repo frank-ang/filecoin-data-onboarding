@@ -12,9 +12,9 @@ This guide describes retrievals using the Singularity tool only. Filecoin retrie
 * SPs have sealed the dataset and deals are active on-chain.
 * IPFS daemon service is started.
 
-## Create Dataset Index
+## Create dataset index
 
-Create the index for a dataset:
+To create the index for a dataset:
 
 ```bash
 singularity index create <DATASET_NAME_OR_ID>
@@ -86,16 +86,7 @@ singularity-retrieve cp -p $MINERID \
 
 Ref: [Indexing and Retrieval in the Singularity getting started doc](https://github.com/tech-greedy/singularity/blob/main/getting-started.md#indexing-and-retrieval).
 
-## Convenience helpers
-
-Optionally, you can simplify user commands by defining aliases or helper scripts configured to the  index path in environment variables or aliases. E.g.
-
-<pre><code><strong>export INDEX_ROOT_CID="/ipfs/bafy..."
-</strong><strong>fil-ls /sub/path
-</strong>fil-cp /sub/path &#x3C;OUTPUT_PATH>
-</code></pre>
-
-For illustration, here are simple implementations you can adapt: [fil-ls ](https://github.com/frank-ang/filecoin-data-onboarding-tools/blob/master/lotus/fil-ls)and [fil-cp](https://github.com/frank-ang/filecoin-data-onboarding-tools/blob/master/lotus/fil-cp) .
+##
 
 
 

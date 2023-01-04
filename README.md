@@ -6,11 +6,11 @@ description: Home
 
 ## Filecoin Large Data Onboarding Guide
 
-This operational guide walkthroughs a checklist of steps to onboard large sized datasets ( >1 PiB in size), into the Filecoin network. This guide is suitable for data clients, data owners, data preparers, and lead SPs.
+This operational guide walkthroughs a checklist of steps to onboard large sized datasets ( >1 PiB in size), into the Filecoin network. This guide is suitable for data owners that are seeking an introduction to the onboarding process.
 
-The end-to-end data onboarding process is covered, from planning, data preparation, deal making, and retrieval testing. This guide is intended to be used as a top-level guide that summarizes and contains references to documentation of related projects.
+The end-to-end data flow is covered at an introductory level, from planning, through to retrieval testing. This guide is intended as a top-level guide that summarizes each step, while providing references to more detailed documentation.
 
-This guide provides a walkthrough usage of the primary client-side tooling, namely [Singularity tool](https://github.com/tech-greedy/singularity), [Lotus client](https://lotus.filecoin.io/), and [Boost.](https://boost.filecoin.io/)
+This guide provides a walkthrough usage of the primary client-side tool set, namely [Singularity,](https://github.com/tech-greedy/singularity) supported by [Boost](https://boost.filecoin.io/), and [Lotus client](https://lotus.filecoin.io/).&#x20;
 
 ### Data Onboarding Checklist
 
