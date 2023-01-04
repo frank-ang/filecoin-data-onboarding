@@ -28,7 +28,8 @@ Budget for data transfer costs, e.g. online bandwidth, public cloud network egre
 The storage gateway packages the source dataset into [CAR format](https://ipld.io/specs/transport/car/) files, **C**ontent **A**ddressable a**R**chives. To prepare a source dataset into CAR files:
 
 ```
-singularity prep create MyDataset ~/dataset/folder ~/outDir 
+singularity prep create <DATASET_NAME> \
+    <PATH_TO_LOCAL_DATASET_ROOT> <PATH_TO_CAR_OUTPUT> 
 ```
 
 The singularity daemon takes the source dataset, splits large files, bin-packs small files, packages the output into a set of CAR files of 32GB maximum size each, and registers the dataset metadata into the Singularity database.
@@ -37,7 +38,7 @@ Monitor the progress of data preparation jobs:
 
 ```
 singularity prep list
-singularity prep status MyDataset
+singularity prep status <DATASET_NAME>
 ```
 
 At the completion of data preparation, a set of CAR files becomes available in the output directory.

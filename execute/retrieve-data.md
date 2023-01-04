@@ -17,14 +17,14 @@ This guide describes retrievals using the Singularity tool only. Filecoin retrie
 Create the index for a dataset:
 
 ```bash
-singularity index create $DATASET_NAME_OR_ID
+singularity index create <DATASET_NAME_OR_ID>
 ```
 
 If your dataset contains a larger numbers of files that exceed default index soft-limits, you should increase the default parameters.
 
 ```
-singularity index create --max-links $INDEX_MAX_LINKS \
-  --max-nodes $INDEX_MAX_NODES $DATASET_NAME
+singularity index create --max-links <INDEX_MAX_LINKS> \
+  --max-nodes <INDEX_MAX_NODES> <DATASET_NAME>
 ```
 
 The dataset's index is written to an IPFS CID. Retrieval operations using the Singularity client will lookup this IPFS index.&#x20;
@@ -55,8 +55,8 @@ If you do not have access to update the DNS provider of your organization, an al
 Using DNSLink name:
 
 ```
-singularity-retrieve ls -v singularity://ipns/mydata.net/
-singularity-retrieve ls -v singularity://ipns/mydata.net/sub/path
+singularity-retrieve ls -v singularity://ipns/mydatasetname.mycorp.net/
+singularity-retrieve ls -v singularity://ipns/mydatasetname.mycorp.net/sub/path
 ```
 
 Using the IPFS path.
@@ -68,18 +68,20 @@ singularity-retrieve ls -v "singularity://ipfs/bafy.../sub/path"
 
 ## Retrieve data
 
+Copy a file from a specific path in the dataset to a local path.
+
 Using DNSLink name:
 
 ```
 singularity-retrieve cp -p $MINERID \
-  singularity://ipns/mydata.net/sub/path $OUTPUT_PATH
+  singularity://ipns/mydatasetname.mycorp.net/sub/path <OUTPUT_PATH>
 ```
 
 Using the IPFS path.
 
 ```
 singularity-retrieve cp -p $MINERID \
-  "singularity://ipfs/bafy.../sub/path" <OUTPUT_PATH>
+  singularity://ipfs/bafy.../sub/path" <OUTPUT_PATH>
 ```
 
 Ref: [Indexing and Retrieval in the Singularity getting started doc](https://github.com/tech-greedy/singularity/blob/main/getting-started.md#indexing-and-retrieval).

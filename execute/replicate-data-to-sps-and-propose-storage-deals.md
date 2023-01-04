@@ -1,10 +1,15 @@
 # 📤 Replicate data to SPs and propose storage deals
 
-Data transfer and deal making to each SP proceeds as follows:
+Data transfer and storage deals can be executed in a couple of ways:
+
+1. Online deals, where the data is transferred on-demand automatically with each storage deal. Data transfer is on a per-deal basis, making it important to agree upon a realistic deal transfer rate that aligns with the SP's sealing rate.
+2. Offline deals, where the data is transferred in bulk prior to making deals. This approach reduces failure modes due to network bandwidth and sealing efficiency, and also supports offline data transfer.&#x20;
+
+For maximum compatibility, offline deals and offline data transfer is the model used in this guide. Data transfer and deal making to each SP proceeds as follows:
 
 1. Data Transfer. CAR files are transferred to SPs, typically "Offline" or out-of-band from the storage deal. Either network URL download or physical transport can be used.&#x20;
 2. Propose Storage Deals. The Storage Gateway proposes storage deals for each transferred CAR file. Offline deals is the default mode of the Singularity tool
-3. Data Import. The SP imports received CAR files, matched to corresponding storage deals by `deal CID`. The miner proceeds to seal imported deals.
+3. Data Import and Sealing. The SP imports received CAR files, matched to corresponding storage deals by `deal CID`. The miner then seals the deal data into sectors.
 
 ## Storage Gateway Activities
 
@@ -13,10 +18,10 @@ Data transfer and deal making to each SP proceeds as follows:
 For legacy deals, Singularity invokes lotus client. Before proposing storage deals, CAR files should first be imported into the Lotus node. This registers the data for deals into lotus client.&#x20;
 
 ```
-lotus client import --car $CAR_FILE
+lotus client import --car <CAR_FILE>
 ```
 
-### Data movement to SPs
+### Data transfer to SPs
 
 Prepared CAR files can be distributed online or offline. Unless sufficient usable bandwidth exists for it to be feasible for an SP to download its set of CAR files online, otherwise PiB-scale data transfers often take place offline via physical storage media shipping.&#x20;
 
@@ -64,18 +69,18 @@ The storage gateway operator should have a discussion with each SP about their e
 
 ### SPs imports CAR files&#x20;
 
-After each SP receives their CAR files and storage deals, the SP imports CAR files matched to each Storage Deal by `deal Cid`.
+After an SP receives their CAR files, and receives storage deals, the SP imports CAR files matched to each Storage Deal by DEAL\_CID.
 
 To import deals into Lotus legacy markets,
 
 ```
-lotus-miner storage-deals import-data $DEAL_CID $CAR_FILENAME
+lotus-miner storage-deals import-data <DEAL_CID> <CAR_FILENAME>
 ```
 
 To import Boost deals,
 
 ```
-boostd import-data $DEAL_CID $CAR_FILENAME
+boostd import-data <DEAL_CID> <CAR_FILENAME>
 ```
 
 ### **Sealing**
@@ -85,7 +90,7 @@ Each SP's miner then proceeds to seal the imported data. This is a computational
 The Data Preparer can track the status by checking deal status:
 
 ```
-singularity status $DATASET_ID
+singularity status <DATASET_ID>
 ```
 
 
