@@ -6,7 +6,7 @@ Data transfer and deal making to each SP proceeds as follows:
 2. Propose Storage Deals. The Storage Gateway proposes storage deals for each transferred CAR file. Offline deals is the default mode of the Singularity tool
 3. Data Import. The SP imports received CAR files, matched to corresponding storage deals by `deal CID`. The miner proceeds to seal imported deals.
 
-
+## Storage Gateway Activities
 
 ### Import CAR files into lotus node&#x20;
 
@@ -44,32 +44,38 @@ singularity repl start --max-deals 2 --cron-schedule '*/2 * * * *' \
     --output-csv $CSV_DIR $DATASET_ID $MINERID $CLIENT_WALLET_ADDRESS
 ```
 
-* sends `--max-deals` per replication request per SP, per cron triggered
-* schedules replication requests per SP based on `--cron-schedule`  (example crontab indicates once every 2 minutes)
-* limits the number of pending deals at any time to `--cron-max-pending-deals`
-* delays the start of deal by `--start-delay`  days, which allows time for the SP to seal the data.
 * sets --duration days for the deal.
 * Indicates a `--verified` deal, using Fil+ datacap, so price in Fil not required.
 * Writes metadata about sent deals to --output-csv
 * DATASET\_ID: Singularity id of the prepared dataset.
 * MINERID: Comma separated storage provider ID list.
-* CLIENT\_WALLET\_ADDRESS: address containing Fil+ datacap or FIL tokens..
+* CLIENT\_WALLET\_ADDRESS: address containing Fil+ datacap or FIL tokens.
 
-\>> **Question**: what are the guidelines that determine the optimal rate of repl deals to each SP?&#x20;
+The rate of storage deals being proposed to SPs is determined by the following parameters:&#x20;
+
+* sends `--max-deals` per replication request per SP, per cron triggered
+* schedules replication requests per SP based on `--cron-schedule`  (example crontab indicates once every 2 minutes)
+* limits the number of pending deals at any time to `--cron-max-pending-deals`
+* delays the start of deal by `--start-delay`  days, which allows time for the SP to seal the data.
+
+The storage gateway operator should have a discussion with each SP about their expected sealing rate, and agree on a deal proposal rate.
+
+## Storage Provider Activities
 
 ### SPs imports CAR files&#x20;
 
 After each SP receives their CAR files and storage deals, the SP imports CAR files matched to each Storage Deal by `deal Cid`.
 
+To import deals into Lotus legacy markets,
+
 ```
 lotus-miner storage-deals import-data $DEAL_CID $CAR_FILENAME
 ```
 
-There are a convenience import scripts in the Singularity repo `auto-import-boost.sh` (boost deals) or `auto-import.sh` (legacy deals).
+To import Boost deals,
 
 ```
-TODO: code sample and input file format for import scripts?
-
+boostd import-data $DEAL_CID $CAR_FILENAME
 ```
 
 ### **Sealing**

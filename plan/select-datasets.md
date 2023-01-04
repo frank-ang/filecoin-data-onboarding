@@ -34,8 +34,6 @@ Private datasets will require the Data Owner to implement encryption for data pr
 
 Encryption of the dataset by the Data Owner prior to storage is one way of enforcing data confidentiality over the Filecoin storage network. The Data Owner selects an encryption method, encrypts datasets prior to packaging and storage, and decrypts the datasets after retrieval. Data Owners are responsible for secret management and key management.
 
-Question>> Ref to DSS actual scripts for illustration or no?
-
 ### Retrieval frequency
 
 Consider the "temperature" of data. At the current state of the Filecoin network, cold data storage and infrequently-accessed archive data are more suitable storage use-cases, than warm or hot datasets.&#x20;

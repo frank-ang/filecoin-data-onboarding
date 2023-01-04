@@ -1,6 +1,6 @@
 # 📐 Reference Architecture
 
-### Data flow design
+## Data flow design
 
 The following is the reference data pipeline architecture to onboard large data sets.&#x20;
 
@@ -19,7 +19,7 @@ The outline of data onboarding steps (numbered circles) as follows:
 7. Create an index for each dataset.
 8. Browse and Retrieve files from the dataset.&#x20;
 
-#### Storage Gateway
+### Storage Gateway
 
 The "_Storage Gateway_" is a client-facing role responsible for data preparation, coordination with and deal-making with participating SPs. The organization running the storage gateway may recommend participating SPs based on individual client requirements. &#x20;
 

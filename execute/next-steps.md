@@ -1,6 +1,6 @@
 # ⏭ Plan next steps
 
-### For Data Owners
+## For Data Owners
 
 Congratulations for completing a large data onboarding to Filecoin!&#x20;
 
@@ -8,13 +8,13 @@ Assess the success of your Filecoin data onboarding Proof-of-Concept (POC). Dete
 
 Consider becoming a Filecoin Case Study. &#x20;
 
-### For Storage Gateway operators and Lead SPs
+## For Storage Gateway operators and Lead SPs
 
 Successful data onboarding projects gives the Lead SP / Storage Gateway operator experience, competence, credibility, and reputation to onboard additional client datasets to Filecoin.&#x20;
 
 Consider setting up a repeatable data onboarding service, and consider commercial models for such a service.
 
-### Deal Renewal
+## Deal Renewal
 
 Storage deals are currently limited to 540 days. Deals that are less than 540 days duration can simply be extended, with sector extension. More typically, verified storage deals can be expected to use the maximum 540-day duration, beyond this expiry, deal renewal requires proposing new deals and re-sealing sectors.
 

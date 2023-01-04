@@ -17,11 +17,13 @@ The storage gateway server should be installed with:
 
 An Ubuntu Linux instance is recommended. Singularity, Lotus node, and Boost packages should be be built and installed from source. Web server and IPFS daemon can be installed from binaries.
 
+
+
 \[**TODO** link to Ubuntu build script]
 
 ## Architectural decisions
 
-#### Data transfer plan and Gateway placement
+### Data transfer plan and Gateway placement
 
 Network data transfer is often a limiting factor when onboarding PiB-scale large data sets. Determine the optimal data replication approach for the following paths:
 
@@ -30,13 +32,17 @@ Network data transfer is often a limiting factor when onboarding PiB-scale large
 
 Compare online network data transfer options and offline physical media transport options, consider feasibility, cost, transfer duration, etc. The data transfer plan may also affect the optimal placement the storage gateway. Compare cloud vs. on-premise hosting. Consider the physical locations of the source dataset and the destination SPs.
 
-#### Storage selection and sizing
+### Storage Gateway sizing&#x20;
 
-Gateway storage should be sized accordingly for the source dataset, and for hosting of the prepared CAP files. Data preparation is IO-bound, and the storage gateway will benefit from fast temporary local storage, such as iSCSI or NVMe storage interfaces.&#x20;
+Gateway storage should be sized for storing the source dataset, and for hosting of the prepared CAR files. A general guideline is to size local storage for 2x of the source dataset size.
 
-### **Example actual gateway sizing configuration**
+### Optimization
 
-**TODO**: insert DSS actual sizing and results as guideline.
+Data preparation tasks are IO-bound, so the storage gateway will benefit from fast local storage, such as iSCSI or NVMe storage interfaces. &#x20;
+
+Singularity can also be configured to specify a number of workers for concurrent data preparation. See deal\_preparation\_worker.num\_workers in the [Singularity config file](https://github.com/tech-greedy/singularity/blob/main/config/default.toml) if required.
+
+### ****
 
 
 

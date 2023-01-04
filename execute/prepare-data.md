@@ -1,6 +1,6 @@
 # 📦 Prepare data
 
-### Preprocess dataset (if required)
+## Preprocess dataset (if required)
 
 The Data Owner may choose to pre-process the original dataset, such as encrypting the source data. The Data Owner should have sufficient secrets management controls and practices in place.&#x20;
 
@@ -10,7 +10,7 @@ The Data Owner may optionally engage a trusted Storage Gateway operator to advis
 Encrypted private datasets will require the datacap application to be reviewed under the "E-Fil+" (Enterprise Filecoin Plus) programme, which has additional enterprise KYB and governance review steps.
 {% endhint %}
 
-### Transfer source data to storage gateway
+## Transfer source data to storage gateway
 
 Source Data is transferred to the Data Preparer via a suitable method. The general choice is between either online data transfer or physical hard drive shipping.
 
@@ -23,7 +23,7 @@ When evaluating data transfer methods for large datasets, consider what is the o
 
 Budget for data transfer costs, e.g. online bandwidth, public cloud network egress fees, offline shipping.
 
-### Prepare data
+## Prepare data
 
 The storage gateway packages the source dataset into [CAR format](https://ipld.io/specs/transport/car/) files, **C**ontent **A**ddressable a**R**chives. To prepare a source dataset into CAR files:
 
