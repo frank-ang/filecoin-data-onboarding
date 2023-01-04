@@ -20,7 +20,7 @@ To create a Filecoin wallet on Boost client, see [boost init command on boost do
 
 Please securely backup the wallet keys, using `lotus wallet export` or `boost wallet export` commands &#x20;
 
-Question> How to use same datacap wallet across lotus and boost?
+
 
 ## Apply for **Large Dataset Datacap Application**&#x20;
 

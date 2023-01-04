@@ -28,11 +28,7 @@ Determine the duration the dataset needs to be retained for. The current maximum
 
 If the selected dataset is classified as public, it can be stored on the Filecoin network in clear and accessible the general public.
 
-Private datasets will require the Data Owner to implement encryption for data privacy. &#x20;
-
-#### Encryption
-
-Encryption of the dataset by the Data Owner prior to storage is one way of enforcing data confidentiality over the Filecoin storage network. The Data Owner selects an encryption method, encrypts datasets prior to packaging and storage, and decrypts the datasets after retrieval. Data Owners are responsible for secret management and key management.
+Private datasets will require the Data Owner to implement encryption for data privacy.  Encryption of the dataset by the Data Owner prior to storage enables confidentiality over the public Filecoin storage network. The Data Owner selects an encryption method, encrypts datasets prior to packaging and storage, and decrypts the datasets after retrieval. Data Owners are responsible for secret management and key management.
 
 ### Retrieval frequency
 
