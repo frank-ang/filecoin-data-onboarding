@@ -13,7 +13,7 @@ The outline of data onboarding steps (numbered circles) as follows:
 1. Data Owner applies for Datacap, to be allocated to the client wallet.
 2. Gateway fetches source dataset.
 3. Gateway prepares source dataset into **C**ontent-addressable **AR**chive ("CAR") formatted files.
-4. SPs downloads CAR files
+4. Storage Providers ("SPs") downloads CAR files
 5. Gateway proposes storage deals to SPs.
 6. SPs imports the CAR files corresponding to Storage Deals. Seals the data into sectors.
 7. Create an index for each dataset.

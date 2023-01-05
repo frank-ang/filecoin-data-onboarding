@@ -8,7 +8,7 @@ description: Define your data storage requirements and objectives
 
 When selecting the dataset to be stored into the Filecoin network, Data Owners should consider: data classification, use-cases, value of the data, and desired improvements over existing storage solution.
 
-The total sizing of a "large dataset" multiplied to include all replicas, can exceed 1 PiB.&#x20;
+To be suitable for the onboarding solution described in this guide, the total sizing of a "large dataset" multiplied to include all replicas, should be expected to exceed 100 TiB.&#x20;
 
 ### Sizing&#x20;
 

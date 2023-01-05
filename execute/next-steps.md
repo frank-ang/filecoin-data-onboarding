@@ -2,7 +2,7 @@
 
 ## For Data Owners
 
-Congratulations for completing a large data onboarding to Filecoin!&#x20;
+Congratulations for completing your first large data onboarding project on Filecoin! 🥳
 
 Assess the success of your Filecoin data onboarding Proof-of-Concept (POC). Determine which additional datasets are suitable candidates for follow-on data onboarding projects.
 

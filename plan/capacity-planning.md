@@ -19,6 +19,8 @@ An Ubuntu Linux instance is recommended. Singularity, Lotus node, and Boost pack
 
 
 
+\[**TODO** link to Ubuntu build script]
+
 ## Architectural decisions
 
 ### Data transfer plan and Gateway placement
