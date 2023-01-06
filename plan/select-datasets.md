@@ -16,6 +16,11 @@ Determine the size of the source dataset.&#x20;
 
 Determine how many replicas are needed. Multiple replicas across multiple SPs will increase data availability, durability, and fault-tolerance. To calculate the total size, multiply the source dataset by the number of replicas.&#x20;
 
+{% hint style="info" %}
+Add some padding buffer to the sizing. \
+Additional buffer storage will be used for padding within the Filecoin data packaging format, the .car archive file. The source data set will be processed, split, and bin-packed into these files, where source data is padded to be in some power of two (^2) size up to a maximum of 32GiB. Expect there will not be 100% padding efficiency so please add a padding buffer to the dataset sizing. If you're interested in the details, see the [Filecoin spec](https://spec.filecoin.io/#section-systems.filecoin\_files.piece).&#x20;
+{% endhint %}
+
 ### Replica placement
 
 Where possible, it is recommended to distribute replicas to multiple SPs across geographic regions. Consider any data residency regulations that may limit replicas to within a country.

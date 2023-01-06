@@ -6,7 +6,7 @@
 
 * [📐 Reference Architecture](plan/reference-architecture.md)
 * [🔎 Select Datasets](plan/select-datasets.md)
-* [🎟 Apply for Filecoin Plus DataCap](plan/apply-for-filecoin-plus-datacap.md)
+* [🎟 Preapare storage funding with DataCap or FIL](plan/apply-for-filecoin-plus-datacap.md)
 * [🏢 Select Storage Providers](plan/select-storage-providers.md)
 
 ## Execute

@@ -16,7 +16,7 @@ This guide provides a walkthrough usage of the primary client-side tool set, nam
 
 1. Understand the large data onboarding reference architecture.
 2. Select datasets for onboarding, estimate sizing.
-3. Apply for Fil+ DataCap
+3. Allocate storage funding with DataCap, or FIL tokens.
 4. Select Storage Providers
 5. Setup Storage Gateway environment
 6. Prepare Data
