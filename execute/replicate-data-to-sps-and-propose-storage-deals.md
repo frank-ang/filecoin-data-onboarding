@@ -13,14 +13,6 @@ For maximum compatibility, offline deals and offline data transfer is the model 
 
 ## Storage Gateway Activities
 
-### Import CAR files into lotus node&#x20;
-
-For legacy deals, Singularity invokes lotus client. Before proposing storage deals, CAR files should first be imported into the Lotus node. This registers the data for deals into lotus client.&#x20;
-
-```
-lotus client import --car <CAR_FILE>
-```
-
 ### Data transfer to SPs
 
 Prepared CAR files can be distributed online or offline. Unless sufficient usable bandwidth exists for it to be feasible for an SP to download its set of CAR files online, otherwise PiB-scale data transfers often take place offline via physical storage media shipping.&#x20;
@@ -64,6 +56,8 @@ The rate of storage deals being proposed to SPs is determined by the following p
 * delays the start of deal by `--start-delay`  days, which allows time for the SP to seal the data.
 
 The storage gateway operator should have a discussion with each SP about their expected sealing rate, and agree on a deal proposal rate.
+
+Further details on how to propose online and offline deals are in the [Singularity quick start guide](https://github.com/tech-greedy/singularity/blob/main/getting-started.md).
 
 ## Storage Provider Activities
 
