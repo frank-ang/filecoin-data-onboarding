@@ -23,7 +23,10 @@ In contrast, "online" deals transfers data immediately following the deal propos
 
 More info in the Lotus docs about [deals with offline data transfer](https://lotus.filecoin.io/tutorials/lotus/large-files/#deals-with-offline-data-transfer).
 
-**Question**> Compare appraoches: SP downloads before storage deal, vs during the storage deal?&#x20;
+Agree with each SP on deal and data transfer sequencing conventions. Compare the approaches between:&#x20;
+
+* Offline/Async: SP downloads CAR files before receiving offline storage deal, &#x20;
+* Online/Sync: SP downloads CAR files on-demand online, upon receipt of each storage deal.
 
 ### Propose storage deals to SPs
 

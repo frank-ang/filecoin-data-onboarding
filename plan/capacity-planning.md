@@ -5,7 +5,7 @@
 The storage gateway server should be installed with:
 
 * [Singularity](https://singularity.storage/) - petabyte-scale data onboarding and retrieval client tool.&#x20;
-  * Install Singularity: [https://github.com/tech-greedy/singularity](https://github.com/tech-greedy/singularity)
+  * Install Singularity: [https://boost.filecoin.io/getting-started](https://boost.filecoin.io/getting-started)
 * [Lotus Lite node](https://lotus.filecoin.io/lotus/install/lotus-lite/) - lite client for interacting with the Filecoin chain. Used for legacy deals.
   * Install Lotus and configure a lotus-lite node: [https://lotus.filecoin.io/lotus/install/lotus-lite/](https://lotus.filecoin.io/lotus/install/lotus-lite/)
 * [Boost](https://boost.filecoin.io/) - new lotus markets client for v1.2 deals with upgraded SPs.
@@ -18,6 +18,8 @@ The storage gateway server should be installed with:
 An Ubuntu Linux instance is recommended. Singularity, Lotus node, and Boost packages should be be built and installed from source. Web server and IPFS daemon can be installed from binaries.
 
 
+
+\[**TODO** link to Ubuntu build script]
 
 ## Architectural decisions
 
