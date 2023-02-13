@@ -1,4 +1,4 @@
-# 🎟 Preapare storage funding with DataCap or FIL
+# 🎟 Prepare storage funding with DataCap or FIL
 
 There are 2 ways to fund storage deals:&#x20;
 
@@ -23,9 +23,9 @@ Next, select a funding method:&#x20;
 
 ### What is DataCap?
 
-DataCap is a cryptoeconomic incentive to Storage Providers for storing verified datasets. Clients apply for DataCap, which is reviewed by a community of Fil+ notaries. Upon approval, DataCap is allocated to the applicant's FIL wallet. DataCap is spent by the client in storage deals with storage providers. In a way, DataCap can be thought of as similar to storage credits. Datacap is&#x20;
+DataCap is a cryptoeconomic incentive to Storage Providers for storing verified datasets. Clients apply for DataCap, which is reviewed by a community of Fil+ notaries. Upon approval, DataCap is allocated to the applicant's FIL wallet. DataCap is spent by the client in storage deals with storage providers. In a way, DataCap can be thought of as similar to storage credits.&#x20;
 
-Datacap is part of the Fil+ (Filecoin Plus) programme. More info about Fil+ Plus:
+Datacap is part of the Fil+ (Filecoin Plus) programme. More info:
 
 * [https://docs.filecoin.io/store/filecoin-plus/](https://docs.filecoin.io/store/filecoin-plus/)
 * [https://github.com/filecoin-project/filecoin-plus-client-onboarding](https://github.com/filecoin-project/filecoin-plus-client-onboarding)
